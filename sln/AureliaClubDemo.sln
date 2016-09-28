@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{15C1161C-6C4C-4E6F-AB32-B861A33EAACF}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AureliaClubDemo.UI", "..\src\AureliaClubDemo.UI\AureliaClubDemo.UI.xproj", "{307AF316-E6AB-4E96-A9B6-BF5B4846308A}"
