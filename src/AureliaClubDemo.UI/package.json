@@ -1,8 +1,24 @@
 {
+  "author": {
+    "email": "roberto.grassi@live.com",
+    "name": "Roberto Grassi"
+  },
+  "description": "An Aurelia web application",
   "jspm": {
+    "directories": {
+      "baseURL": "wwwroot"
+    },
     "dependencies": {
-      "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^1.0.0",
-      "aurelia-framework": "npm:aurelia-framework@^1.0.4"
+      "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^1.0.1",
+      "aurelia-framework": "npm:aurelia-framework@^1.0.7"
     }
-  }
+  },
+  "license": "MIT",
+  "name": "AureliaClubDemo",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robertoenbarcelona/AureliaClubDemo"
+  },
+  "version": "0.0.1"
 }
