@@ -1,5 +1,5 @@
 System.config({
-  baseURL: "/",
+  baseURL: "/wwwroot",
   defaultJSExtensions: true,
   transpiler: false,
   paths: {

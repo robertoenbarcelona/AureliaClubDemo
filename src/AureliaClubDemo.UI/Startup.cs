@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+﻿
 
 namespace AureliaClubDemo.UI
 {
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Logging;
+    using Newtonsoft.Json.Serialization;
+
     public class Startup
     {
         public Startup(IHostingEnvironment env)
@@ -28,7 +27,14 @@ namespace AureliaClubDemo.UI
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddMvc();
+            services.Configure<IISOptions>(options =>  {  });
+
+
+            services.AddMvc().AddJsonOptions(options =>
+            {
+                options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,21 +46,24 @@ namespace AureliaClubDemo.UI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseStatusCodePages();
                 app.UseBrowserLink();
             }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-            }
+            ////else
+            ////{
+            ////    app.UseExceptionHandler("/Home/Error");
+            ////}
 
+            app.UseDefaultFiles();
             app.UseStaticFiles();
+            app.UseMvcWithDefaultRoute();
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+            ////app.UseMvc(routes =>
+            ////{
+            ////    routes.MapRoute(
+            ////        name: "default",
+            ////        template: "{controller=Home}/{action=Index}/{id?}");
+            ////});
         }
     }
 }

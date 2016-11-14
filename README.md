@@ -6,7 +6,8 @@ This app is a living example for Aurelia apps, Azure services and nuch more. It 
 
 ## Creating a modern workspace with Visual Studio
 
-The first release of this app can be read from [here](https://itblogsogeti.com/2016/09/27/visual-studio-y-el-nuevo-desarrollo-web/)
+The first approch to new web can be read from [here](https://itblogsogeti.com/2016/09/27/visual-studio-y-el-nuevo-desarrollo-web/)
+The first release of this app can be read from [here](https://itblogsogeti.com/.../)
 
 ## Paying with Aurelia
 
