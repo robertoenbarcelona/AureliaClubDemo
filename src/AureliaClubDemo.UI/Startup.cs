@@ -27,8 +27,7 @@ namespace AureliaClubDemo.UI
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.Configure<IISOptions>(options =>  {  });
-
+            services.Configure<IISOptions>(options => { });
 
             services.AddMvc().AddJsonOptions(options =>
             {
