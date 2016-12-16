@@ -1,5 +1,4 @@
 ﻿
-
 namespace AureliaClubDemo.UI
 {
     using Microsoft.AspNetCore.Builder;
