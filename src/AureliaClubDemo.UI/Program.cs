@@ -12,6 +12,7 @@ namespace AureliaClubDemo.UI
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
+                .UseUrls("http://localhost:5000")
                 .UseStartup<Startup>()
                 .Build();
 

@@ -47,10 +47,10 @@ namespace AureliaClubDemo.UI
                 app.UseStatusCodePages();
                 app.UseBrowserLink();
             }
-            ////else
-            ////{
-            ////    app.UseExceptionHandler("/Home/Error");
-            ////}
+            else
+            {
+                app.UseExceptionHandler("Home/Error");
+            }
 
             app.UseDefaultFiles();
             app.UseStaticFiles();
